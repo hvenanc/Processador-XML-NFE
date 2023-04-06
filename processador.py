@@ -35,25 +35,20 @@ for x in nfes:
     xml = open(x)
     nfe = minidom.parse(xml)
 
-    chave = nfe.getElementsByTagName('chNFe')
-    chave = chave[0].firstChild.data
+    chave = elements_text(nfe,'chNFe')
     chaves.append(chave)
 
-    forn = nfe.getElementsByTagName('xNome')
-    forn = forn[0].firstChild.data
+    forn = elements_text(nfe,'xNome')
     fornecedores.append(forn)
 
-    total = nfe.getElementsByTagName('vNF')
-    total = total[0].firstChild.data
-    valor_total.append(float(total))
+    total = elements_number(nfe,'vNF')
+    valor_total.append(total)
 
-    num = nfe.getElementsByTagName('nNF')
-    num = num[0].firstChild.data
+    num = elements_text(nfe,'nNF')
     num_nfe.append(num)
 
-    data = nfe.getElementsByTagName('dhEmi')
-    data = data[0].firstChild.data
-    datas.append(formatar_data(data))
+    data = elements_date(nfe,'dhEmi')
+    datas.append(data)
     
 
 df = pd.DataFrame()
