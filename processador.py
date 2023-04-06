@@ -57,7 +57,6 @@ for x in nfes:
     
 
 df = pd.DataFrame()
-
 df['Chave'] = chaves
 df['Número NFE'] = num_nfe
 df['Data Emissão'] = datas
@@ -67,5 +66,3 @@ df['Valor NFE'] = valor_total
 df = df.sort_values(['Data Emissão'])
 df = df.reset_index(drop=True)
 df.to_excel('/home/henrique/Documentos/Projetos/Processador XML/NFE_Março.xlsx')
-
-    

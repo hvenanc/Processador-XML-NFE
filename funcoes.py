@@ -7,23 +7,17 @@ def elements_text(nfe,tag):
 
 def elements_number(nfe,tag):
 
-    elements = []
-
     element = nfe.getElementsByTagName(tag)
     element = element[0].firstChild.data
-    elements.append(float(element))
 
-    return elements
+    return float(element)
 
 def elements_date(nfe,tag):
 
-    elements = []
-
     element = nfe.getElementsByTagName(tag)
     element = element[0].firstChild.data
-    elements.append(formatar_data(element))
 
-    return elements
+    return formatar_data(element)
 
 def formatar_data(data):
 
