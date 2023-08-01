@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 
 
-class ProcessadorXML:
+class ProcessadorNFE:
 
     def __init__(self, caminho):
         self._caminho = caminho

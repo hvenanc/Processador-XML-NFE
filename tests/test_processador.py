@@ -1,6 +1,6 @@
 import pytest
 
-from processador import ProcessadorXML
+from processador import ProcessadorNFE
 
 
 class TestClass:
@@ -13,7 +13,7 @@ class TestClass:
         .xml e representava um Nota Fiscal Eletrônica (NFE).
         """
         cam = '/home/henrique/Documentos/NFE/'
-        notas = ProcessadorXML(cam)
+        notas = ProcessadorNFE(cam)
         arquivos = notas.buscar_nfes(cam)
 
         esperado = 78
@@ -30,7 +30,7 @@ class TestClass:
         """
 
         cam = '/home/henrique/Documentos/NFE/'
-        notas = ProcessadorXML(cam)
+        notas = ProcessadorNFE(cam)
         arquivos = notas.buscar_arquivos(cam)
 
         esperado = 265
@@ -41,14 +41,14 @@ class TestClass:
     def test_valida_arquivo_tipo_xml(self):
         with pytest.raises(Exception):
             cam = '/home/henrique/Documentos/NFE/Teste4.xlsx'
-            notas = ProcessadorXML(cam)
+            notas = ProcessadorNFE(cam)
             resultado = notas.valida_xml(cam)
 
             assert resultado
 
     def test_relatorio_gerado_com_sucesso(self):
         cam = '/home/henrique/Documentos/NFE/'
-        notas = ProcessadorXML(cam)
+        notas = ProcessadorNFE(cam)
         relatorio = notas.relatorio('/home/henrique/Documentos/NFE/', 'Notas Março')
 
         esperado = 'Relatório Gerado com Sucesso'

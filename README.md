@@ -15,6 +15,24 @@ arquivo do tipo .xlsx (Excel).
 
 ![RELATORIO](Exemplo.png)
 
+### Instalação
+
+- Linux/Mac:
+
+```python3 -m venv venv```
+
+```source venv/bin/activate```
+
+```pip install Processador-XML-NFE```
+
+- Windows:
+
+```virtaulenv venv```
+
+```venv/Scripts/Activate```
+
+```pip install Processador-XML-NFE```
+
 ### Exemplo de uso
 
 ![CODE](uso.png)

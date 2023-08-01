@@ -1,7 +1,7 @@
-from processador import ProcessadorXML
+from processador import ProcessadorNFE
 
 cam = '/home/henrique/Documentos/NFE/'
-notas = ProcessadorXML(cam)
+notas = ProcessadorNFE(cam)
 relatorio = notas.relatorio('/home/henrique/Documentos/NFE/', 'Notas Março')
 print(relatorio)
 
