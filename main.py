@@ -1,7 +1,7 @@
 from processador import ProcessadorNFE
 
-cam = '/home/henrique/Documentos/NFE/'
+cam = '/home/henrique/Área de Trabalho/Amostra'
 notas = ProcessadorNFE(cam)
-relatorio = notas.relatorio('/home/henrique/Documentos/NFE/', 'Notas Março')
+relatorio = notas.relatorio_nfce(cam + '/', 'Teste')
 print(relatorio)
 
