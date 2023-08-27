@@ -173,7 +173,7 @@ class ProcessadorNFE:
         df.to_excel(f'{caminho}{nome}.xlsx')
         return 'Relatório Gerado com Sucesso'
 
-    def relatorio(self, caminho, nome):
+    def relatorio_nfe(self, caminho, nome):
         df = pd.DataFrame()
         df['Chave'] = self.buscar_dados_fornecedores(caminho)[0]
         df['Número NFE'] = self.buscar_dados_fornecedores(caminho)[3]
